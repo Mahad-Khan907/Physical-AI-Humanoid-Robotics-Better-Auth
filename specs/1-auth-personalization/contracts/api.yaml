@@ -1,0 +1,90 @@
+openapi: 3.0.0
+info:
+  title: AI Textbook Authentication API
+  version: 1.0.0
+  description: API for user authentication and session management.
+
+paths:
+  /api/auth/signup:
+    post:
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+                software_background:
+                  type: string
+                hardware_background:
+                  type: string
+                experience_level:
+                  type: string
+              required:
+                - email
+                - password
+                - software_background
+                - hardware_background
+                - experience_level
+      responses:
+        '201':
+          description: User created successfully
+        '400':
+          description: Invalid input or user already exists
+
+  /api/auth/login:
+    post:
+      summary: Log in a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  format: password
+              required:
+                - email
+                - password
+      responses:
+        '200':
+          description: Login successful, session cookie set
+        '401':
+          description: Invalid credentials
+
+  /api/auth/logout:
+    post:
+      summary: Log out a user
+      responses:
+        '200':
+          description: Logout successful, session cookie cleared
+
+  /api/auth/session:
+    get:
+      summary: Get current user session
+      responses:
+        '200':
+          description: Session is active, returns user info
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  email:
+                    type: string
+        '401':
+          description: No active session

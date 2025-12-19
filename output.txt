@@ -1,0 +1,6 @@
+The feature specification for "Create AI Textbook Site" has been created at `specs/1-create-ai-textbook/spec.md`.
+The chapter count has been corrected from 8 to 7 as requested.
+A Specification Quality Checklist has been generated at `specs/1-create-ai-textbook/checklists/requirements.md`.
+A Prompt History Record (PHR) for this action has been saved to `history/prompts/specs/1-create-ai-textbook.spec.prompt.md`.
+
+This feature is now ready for the planning phase (`/sp.plan`).

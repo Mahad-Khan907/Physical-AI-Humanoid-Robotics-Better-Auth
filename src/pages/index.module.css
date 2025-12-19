@@ -1,0 +1,50 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chapterSection {
+  padding: 2rem 0;
+}
+
+.chapterCard {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.chapterCardLink {
+  text-decoration: none !important;
+  color: var(--ifm-color-white) !important; /* Ensure text is white for contrast */
+  display: block;
+  height: 100%;
+  background-color: #4CAF50; /* Simple green background */
+  border-radius: 15px; /* More rounded corners */
+  transition: all 0.2s ease-in-out;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Keep consistent shadow */
+}
+
+.chapterCardLink:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-md);
+  background-color: #43A047; /* Darker green on hover */
+}
