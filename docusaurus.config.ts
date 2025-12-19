@@ -7,25 +7,19 @@ const config: Config = {
   tagline: "Learn, Build, and Explore Physical AI",
   favicon: "img/favicon.ico",
 
-  // Production URL set karein agar deploy kar rahe hain
-  url: "http://localhost:3000",
+  // ✅ FRONTEND URL (VERCEL)
+  url: "https://physical-ai-better-auth.vercel.app",
   baseUrl: "/",
 
   organizationName: "mahad-khan907",
   projectName: "physical-ai-humanoid-robotics",
 
   customFields: {
-    // Environment variable se URL lega, warna default local use karega
-    authBackendURL: process.env.AUTH_BACKEND_URL || 'http://localhost:3001',
+    // ✅ BACKEND URL (RAILWAY)
+    authBackendURL: "https://better-auth-backend.up.railway.app",
   },
 
   onBrokenLinks: "warn",
-
-  markdown: {
-    hooks: {
-      onBrokenMarkdownLinks: "warn",
-    },
-  },
 
   i18n: {
     defaultLocale: "en",
@@ -58,8 +52,8 @@ const config: Config = {
       },
       items: [
         {
-          type: 'custom-AuthNavbarItem',
-          position: 'right',
+          type: "custom-AuthNavbarItem",
+          position: "right",
         },
         {
           href: "https://github.com/Mahad-Khan907",
@@ -72,26 +66,6 @@ const config: Config = {
           position: "right",
         },
       ],
-    },
-
-    footer: {
-      style: "dark",
-      links: [
-        {
-          title: "Connect",
-          items: [
-            {
-              label: "GitHub",
-              href: "https://github.com/Mahad-Khan907",
-            },
-            {
-              label: "LinkedIn",
-              href: "https://www.linkedin.com/in/khan-khan-5772a8347",
-            },
-          ],
-        },
-      ],
-      copyright: `Copyright ${new Date().getFullYear()} Physical AI. Built with Docusaurus.`,
     },
 
     prism: {
