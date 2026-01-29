@@ -5,7 +5,7 @@ import { createContext } from "react";
 export function createAuthClientInstance() {
   return createAuthClient({
     // Ensure this matches your live Railway backend URL
-    baseURL: "",
+    baseURL: "https://mahad-khan907-book-better-auth.hf.space/",
     fetchOptions: {
       // CRITICAL: This allows the browser to send/receive cookies across domains
       credentials: "include", 
