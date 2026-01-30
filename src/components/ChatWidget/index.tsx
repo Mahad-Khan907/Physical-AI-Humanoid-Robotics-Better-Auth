@@ -51,7 +51,7 @@ const ChatWidget = ({ selectedText, clearSelectedText }) => {
     setMessages(prev => [...prev, { text: '...', sender: 'bot', isTyping: true }]);
 
     try {
-      const response = await fetch('https://my-backend-ai-book.up.railway.app/ask', {
+      const response = await fetch('', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: textToSend }),
