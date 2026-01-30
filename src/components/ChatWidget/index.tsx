@@ -51,7 +51,7 @@ const ChatWidget = ({ selectedText, clearSelectedText }) => {
     setMessages(prev => [...prev, { text: '...', sender: 'bot', isTyping: true }]);
 
     try {
-      const response = await fetch('', {
+      const response = await fetch('https://mahad-khan907-book-agent-backend.hf.space/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: textToSend }),
